@@ -1,0 +1,40 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+---
+
+<Layout title="By Felipe Bolgar">
+	<Header />
+	<main class="flex flex-col-reverse lg:flex-row justify-center items-center min-h-[80vh] lg:gap-20 lg:px-5 px-2 py-7">
+		<div class="flex flex-col justify-between mt-[100px]">
+			<div class="text-center lg:text-left ">
+				<h1 class="lg:text-8xl text-6xl font-bold">Make</h1>
+				<span class="lg:text-8xl text-6xl font-bold">remote work</span>
+			</div>
+			<div class="text-center m-auto lg:m-0 lg:text-left pt-10">
+				<p class="text-gray-500 max-w-sm text-xl lg:text-base">Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
+			</div>
+			<div class="mt-20">
+				<a class="lg:block lg:w-max lg:m-0 flex justify-center w-[50%] m-auto bg-black text-white px-5 py-4 rounded-xl hover:bg-zinc-900 " href="#">Learn more</a>
+			</div>
+			<div class="flex flex-row gap-8 lg:mt-[160px] mt-[100px] justify-center lg:justify-start">
+				<div>
+					<img src="/images/client-databiz.svg" alt="">
+				</div>
+				<div>
+					<img src="/images/client-audiophile.svg" alt="">
+				</div>
+				<div>
+					<img src="/images/client-meet.svg" alt="">
+				</div>
+				<div>
+					<img src="/images/client-maker.svg" alt="">
+				</div>
+			</div>
+		</div>
+
+		<div>
+			<img class="flex shrink-0 max-w-2xl lg:max-w-full lg:max-h-[700px] w-full max-h-max" src="/images/image-hero-desktop.png" alt="">
+		</div>
+	</main>
+</Layout>

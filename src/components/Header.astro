@@ -1,0 +1,104 @@
+---
+ 
+---
+
+<header class="flex lg:items-center justify-between top-0 py-10 px-10 text-gray-500">
+    <div>
+        <a href="/"><img src="/images/logo.svg" alt=""></a>
+    </div>
+    <nav class="hidden lg:flex flex-grow basis-0 ml-20 items-center">
+            <ul class="flex gap-8">
+                <li class="relative">
+                    <div class="select">
+                        <button class="products flex gap-2 items-center hover:text-black transition-colors duration-200 selected relative">Features <img class="w-[14px] h-[10px] icon-down-p" src="/images/icon-arrow-down.svg" alt=""> <img class="w-[14px] h-[10px] icon-up-p hidden" src="/images/icon-arrow-up.svg" alt=""></button>
+                        <nav class="hidden dropdown1">
+                            <ul class="absolute right-0 flex flex-col items-center gap-2 mt-3 shadow-2xl rounded-lg py-4 px-7">
+                                <li class="flex items-center justify-center gap-1"><img class="object-fit h-4" src="/images/icon-todo.svg" alt=""><a class="hover:text-black transition-colors duration-200" href="">Todo list</a></li>
+                                <li class="flex items-center justify-center gap-1"><img class="object-fit h-4" src="/images/icon-calendar.svg" alt=""><a class="hover:text-black transition-colors duration-200"  href="">Calendar</a></li>
+                                <li class="flex items-center justify-center gap-1"><img class="object-fit h-4" src="/images/icon-reminders.svg" alt=""><a class="hover:text-black transition-colors duration-200"  href="">Reminders</a></li>
+                                <li class="flex items-center justify-center gap-1"><img class="object-fit h-4" src="/images/icon-planning.svg" alt=""><a class="hover:text-black transition-colors duration-200"  href="">Planning</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </li>
+                <li class="relative">
+                    <div class="select">
+                        <button class="company flex gap-2 items-center hover:text-black transition-colors duration-200 selected">Company <img class="w-[14px] h-[10px] icon-down-c" src="/images/icon-arrow-down.svg" alt=""> <img class="w-[14px] h-[10px] icon-up-c hidden" src="/images/icon-arrow-up.svg" alt=""></button>
+                    </div>
+                    <nav class="hidden dropdown2">
+                        <ul class="absolute flex-col justify-center items-center mt-3 py-4 px-7 gap-2 rounded-lg shadow-2xl w-[130px]">
+                            <li><a class="hover:text-black transition-colors duration-200" href="">History</a></li>
+                            <li><a class="hover:text-black transition-colors duration-200" href="">Our team</a></li>
+                            <li><a class="hover:text-black transition-colors duration-200" href="">Blog</a></li>
+                        </ul>
+                    </nav>
+                </li>
+                <li><a class="hover:text-black transition-colors duration-200" href="#">Carrers</a></li>
+                <li><a class="hover:text-black transition-colors duration-200" href="#">About</a></li>
+            </ul>
+        
+    </nav>
+    <div>
+        <ul class="hidden lg:flex gap-8 items-center">
+            <li><a class="hover:text-black transition-colors duration-200" href="#">Login</a></li>
+            <li><a class=" text-black border-2 border-gray-400 px-6 py-3 rounded-2xl hover:bg-black hover:text-white hover:border-stone-700 transition-all duration-200" href="#">Register</a></li>
+        </ul>
+    </div>
+    <div class="flex flex-col lg:hidden self-center">
+        <div class="relative">
+            <button class=" right-0"><img class="burger-menu" src="/images/icon-menu.svg" alt="nav-bar-burger"> <img class="hidden close-menu static right-0" src="/images/icon-close-menu.svg" alt=""></button>
+        </div>
+        <nav class="hidden flex-col gap-9 burger-nav allBurger absolute right-0 mt-10 w-[200px] h-[100vh] bg-white">
+            <ul class="flex flex-col gap-3">
+                <button class="products flex gap-2 items-center hover:text-black transition-colors duration-200 selected relative">Features <img class="w-[14px] h-[10px] icon-down-p" src="/images/icon-arrow-down.svg" alt=""> <img class="w-[14px] h-[10px] icon-up-p hidden" src="/images/icon-arrow-up.svg" alt=""></button>
+                <button class="company flex gap-2 items-center hover:text-black transition-colors duration-200 selected">Company <img class="w-[14px] h-[10px] icon-down-c" src="/images/icon-arrow-down.svg" alt=""> <img class="w-[14px] h-[10px] icon-up-c hidden" src="/images/icon-arrow-up.svg" alt=""></button>
+                <li><a class="hover:text-black transition-colors duration-200" href="#">Carrers</a></li>
+                <li><a class="hover:text-black transition-colors duration-200" href="#">About</a></li>
+            </ul>
+            <ul class="flex flex-col gap-3 mt-8">
+                <li><a class="hover:text-black transition-colors duration-200" href="#">Login</a></li>
+                <li><a class=" text-black border-2 border-gray-400 px-6 py-3 rounded-2xl hover:bg-black hover:text-white hover:border-stone-700 transition-all duration-200" href="#">Register</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<script>
+    const products = document.querySelector('.products');
+    const company = document.querySelector('.company')
+    const dropdown1 = document.querySelector('.dropdown1');
+    const dropdown2 = document.querySelector('.dropdown2');
+    const iconUpProducts = document.querySelector('.icon-up-p')
+    const icondDownProducts = document.querySelector('.icon-down-p')
+    const iconUpCompany = document.querySelector('.icon-up-c')
+    const icondDownCompany = document.querySelector('.icon-down-c')
+
+    const burgerNav = document.querySelector('.burger-nav')
+    const burgerMenu = document.querySelector('.burger-menu')
+    const closeMenu = document.querySelector('.close-menu')
+    const allBurger = document.querySelector('.allBurger')
+
+    burgerMenu.addEventListener('click', () => {
+        burgerMenu.classList.toggle('hidden')
+        closeMenu.classList.remove('hidden')
+        burgerNav.classList.remove('hidden')
+        allBurger.classList.add('shadow-[100px_0_20px_-20px_rgba(0,0,0,0.3)]', 'py-6', 'px-4')
+    })
+    closeMenu.addEventListener('click', () => {
+        closeMenu.classList.add('hidden')
+        burgerMenu.classList.remove('hidden')
+        burgerNav.classList.add('hidden')
+    })
+
+    products.addEventListener('click', () => {
+        dropdown1.classList.toggle('hidden')
+        iconUpProducts.classList.toggle('hidden')
+        icondDownProducts.classList.toggle('hidden')
+    })
+    company.addEventListener('click', () => {
+        dropdown2.classList.toggle('hidden')
+        iconUpCompany.classList.toggle('hidden')
+        icondDownCompany.classList.toggle('hidden')
+    })
+    
+</script>
